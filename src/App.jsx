@@ -6,10 +6,11 @@ import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
 import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molucules/SearchInput";
 import { UserCard } from "./components/organism/UserCard";
+import { DefalutLayout } from "./components/templates/DefaultLayout";
 
 const user = {
   name: "make",
-  image: "https://source.unsplash.com/%E5%86%99%E7%9C%9F/dKCKiC0BQtU",
+  image: "https://source.unsplash.com/FVJ_rSzuHdQ",
   email: "abc@gmail.com",
   phone: "0120-828-828",
   company: { name: "テスト株式会社" },
@@ -20,10 +21,12 @@ function App() {
   console.log("aaa");
   return (
     <>
-      <PrimaryButton>テスト</PrimaryButton>
-      <SecondaryButton>検索</SecondaryButton>
-      <SearchInput></SearchInput>
-      <UserCard user={user} />
+      <DefalutLayout>
+        <PrimaryButton>テスト</PrimaryButton>
+        <SecondaryButton>検索</SecondaryButton>
+        <SearchInput></SearchInput>
+        <UserCard user={user} />
+      </DefalutLayout>
     </>
   );
 }
