@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
     <SHeader>
-      <a to="/">HOME</a>
-      <a to="/users">USER</a>
+      <SLink to="/">HOME</SLink>
+      <SLink to="/users">USER</SLink>
     </SHeader>
   );
 };
@@ -15,4 +16,8 @@ const SHeader = styled.header`
   /* position: fixed; */
   padding: 8px 0;
   width: 100%;
+`;
+
+const SLink = styled(Link)`
+  margin: 0 8px;
 `;
