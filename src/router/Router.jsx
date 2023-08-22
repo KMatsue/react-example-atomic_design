@@ -9,7 +9,6 @@ export const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route
-          exact
           path="/"
           element={
             <DefalutLayout>
@@ -17,7 +16,6 @@ export const Router = () => {
             </DefalutLayout>
           }
         />
-
         <Route
           path="/users"
           element={
