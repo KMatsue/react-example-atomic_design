@@ -1,11 +1,22 @@
-// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { SecondaryButton } from "../atoms/button/SecondaryButton";
+import { useContext } from "react";
+import { UserContext } from "../../providers/UserProvider";
 
 export const Top = () => {
-  const onClickAdmin = () => {};
+  const navigate = useNavigate();
+  const { setUserInfo } = useContext(UserContext);
+  const onClickAdmin = () => {
+    // console.log("onklii");
+    setUserInfo({ isAdmin: true });
+    navigate("/users");
+  };
 
-  const onClickGeneral = () => {};
+  const onClickGeneral = () => {
+    setUserInfo({ isAdmin: false });
+    navigate("/users");
+  };
 
   return (
     <SContainer>
@@ -18,5 +29,5 @@ export const Top = () => {
 };
 
 const SContainer = styled.div`
-  text-align: conter;
+  text-align: center;
 `;
